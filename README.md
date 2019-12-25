@@ -1,2 +1,2 @@
 # favorite-movies-v2
-Full steck app (MongoDB + NodeJs + React)
+Full stack app (MongoDB + NodeJs + React)
