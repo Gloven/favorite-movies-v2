@@ -1,0 +1,5 @@
+**/node_modules
+public/static/build
+etc/config.js
+.vscode
+**/config/default.json

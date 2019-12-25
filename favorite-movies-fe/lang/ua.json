@@ -1,0 +1,71 @@
+{
+   "domain": "messages",
+   "locale_data": {
+      "messages": {
+         "LOGOUT": [
+            "ВИЙТИ"
+         ],
+         "Title": [
+            "Заголовок"
+         ],
+         "Subtitle": [
+            "Підзаголовок"
+         ],
+         "Image URL": [
+            "URL-адреса зображення"
+         ],
+         "Text": [
+            "Текст"
+         ],
+         "GO BACK": [
+            "НАЗАД"
+         ],
+         "Edit your post here": [
+            "Редагуй свій пост тут"
+         ],
+         "Create your post here": [
+            "Створюй свій пост тут"
+         ],
+         "SAVE": [
+            "ЗБЕРЕГТИ"
+         ],
+         "Sign in into your account": [
+            "Ввійдіть в Ваш акаунт"
+         ],
+         "Email Address": [
+            "Пошта"
+         ],
+         "Password": [
+            "Пароль"
+         ],
+         "By signing in, you agree to the": [
+            "Увійшовши, ви погоджуєтеся з"
+         ],
+         "Terms of Service": [
+            "умовами обслуговування"
+         ],
+         "SIGN IN": [
+            "Увійти"
+         ],
+         "Search": [
+            "Пошук"
+         ],
+         "CREATE NEW": [
+            "СТВОРИТИ НОВИЙ"
+         ],
+         "%d hour": [
+            "",
+            "%d hours"
+         ],
+         "%d minute": [
+            "",
+            "%d minutes"
+         ],
+         "": {
+            "domain": "messages",
+            "plural_forms": "nplurals=INTEGER; plural=EXPRESSION;",
+            "lang": ""
+         }
+      }
+   }
+}

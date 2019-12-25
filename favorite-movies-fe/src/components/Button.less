@@ -1,0 +1,55 @@
+
+.Button {
+    padding: 0 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+    text-align: center;
+    height: 26px;
+    line-height: 24px;
+    cursor: pointer;
+    font-weight: bold;
+    border: solid 1px #e5e5e5;
+    background-color: #ffffff;
+    color: #3f3f3f;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 11px;
+    box-sizing: content-box;
+
+    &.grey {
+        border: solid 1px #e0e1e0;
+        background-color: #f4f5f4;
+        font-size: 13px;
+        font-weight: 600;
+        color: #646464;
+    }
+
+    &:hover {
+        background-color: #01749c;
+        border-color: transparent;
+        color: #fff;
+    }
+
+    &.download,
+    &.download_revit {
+        background-color: #b30000;
+        width: 159px;
+        height: 40px;
+        text-transform: uppercase;
+        color: white;
+        font-size: 11px;
+        font-weight: bold;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+    &.download_revit {
+        width: 140px;
+    }
+
+    &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
