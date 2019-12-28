@@ -1,11 +1,13 @@
 const express = require('express')
 const config = require('config')
 const mongoose = require('mongoose')
-
-const app = express()
 const PORT = config.get('port') || 8080
 
-app.use('/api/list', require('./routes/movies.routes'));
+const app = express()
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
+app.use('/api/movies', require('./routes/movies.routes'))
 
 async function appStart () {
     try {
@@ -13,7 +15,13 @@ async function appStart () {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true
+        }, (err) => {
+            if(err) {
+                console.error(err)
+                return
+            }
         })
+
         app.listen(PORT, () => console.log(`App has been started on port ${PORT}`))
     } catch (error) {
         console.log('Server error', error.message)
