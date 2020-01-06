@@ -4,7 +4,8 @@ const Movie = require('../models/Movie');
 
 const router = Router();
 
-// /api/movies/list
+// GET LIST ALL MOVIES
+
 router.get('/list', async (req, res) => {
     try {
         const movies = await Movie.find({})
@@ -15,7 +16,9 @@ router.get('/list', async (req, res) => {
     }
 })
 
-// /api/movies/create
+
+// CREATE NEW MOVIE
+
 router.post(
 '/create',
     [
@@ -61,15 +64,59 @@ router.post(
 
         res.status(201).json(movie);
     } catch (error) {
-        console.error(error)
+        console.error(error.message)
         res.status(500).json({ message: "Server error" })
     }
 })
 
-router.post('/:id', async (req, res) => {
+// GET ONE FIELD BY ID
+
+router.post('/:id',  [
+    check('id', 'Id is not valid').isMongoId()
+    ],
+    async (req, res) => {
     try {
-        
+        const { id } = req.params
+
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            res.status(400).json({"errors": errors.array(), "message": "Fields is not valid" })
+        }
+
+        const movie = await Movie.find({ '_id': id })
+
+        if (movie) res.status(200).json(movie)
     } catch (error) {
+        console.log(error.message)
+        res.status(500).json({ message: "Server error" })
+    }
+})
+
+// UPDATE MOVIE
+
+router.patch('/:id',  [
+    check('id', 'Id is not valid').isMongoId()
+    ],
+    async (req, res) => {
+    try {
+        const { id } = req.params
+
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            res.status(400).json({"errors": errors.array(), "message": "Fields is not valid" })
+        }
+
+        await Movie.update(
+            { '_id': id },
+            { $set: { ...req.body }}
+        )
+        const movie =  await Movie.find({ '_id': id });
+
+        if (movie) res.status(200).json(movie)
+    } catch (error) {
+        console.log(error.message)
         res.status(500).json({ message: "Server error" })
     }
 })
