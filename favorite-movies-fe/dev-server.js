@@ -12,7 +12,7 @@ new WebpackDevServer(webpack(config), {
     quiet: false,
     noInfo: false,
     stats: { colors: true }
-}).listen(8080, '0.0.0.0', function (err, result) {
+}).listen(8000, '0.0.0.0', function (err) {
     if (err) {
         return console.log(err);
     }

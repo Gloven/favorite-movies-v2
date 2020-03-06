@@ -11,6 +11,7 @@ import angleLeft                from '../assets/icons/angleLeft.svg';
 import angleRight               from '../assets/icons/angleRight.svg';
 import angleDown                from '../assets/icons/angleDown.svg';
 import plus                     from '../assets/icons/plus.svg';
+import arrowRight               from '../assets/icons/arrowRight.svg';
 
 import styles                   from './Icon.less';
 
@@ -19,6 +20,7 @@ const cx = classnames.bind(styles);
 const ICONS = {
     close,
     globe,
+    arrowRight,
     check,
     download,
     angleRight,

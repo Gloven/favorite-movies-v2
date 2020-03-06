@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react';
 import PropTypes                from 'prop-types';
-import { mountApp }             from '../../main.js';
 import { connect }              from 'react-redux';
 
+import { mountApp }             from '../../main.js';
 import Header from '../Header.js';
-import Footer from '../Footer.js';
+// import Footer from '../Footer.js';
 
 import styles from './MainLayout.less';
 
@@ -24,19 +24,18 @@ class MainLayout extends PureComponent {
     };
 
     render() {
-        const { children,  } = this.props;
+        const { children  } = this.props;
 
         return (
             <div className={styles.MainLayout}>
                 <Header />
                 {children}
-                <Footer />
             </div>
         );
     }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps() {
     return {};
 }
 

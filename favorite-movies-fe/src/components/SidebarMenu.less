@@ -1,0 +1,24 @@
+@import '../utils/styleVariables.less';
+
+.SidebarMenu {
+    padding: 40px 0;
+
+    .tab {
+        padding: 0 20px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        text-transform: capitalize;
+        transition: all .2s;
+        cursor: pointer;
+
+        &.active,
+        &:hover {
+            background: @mainCounterBg;
+            color: @linkColor;
+        }
+    }
+    
+}

@@ -2,17 +2,19 @@ import React, { PureComponent } from 'react';
 import PropTypes                from 'prop-types';
 import { connect }              from 'react-redux';
 import { TransitionGroup }      from 'react-transition-group';
+import Sidebar                  from './Sidebar.js';
+import MainOuter                from './MainOuter.js';
 
 import styles                   from './MainPage.less';
 
-class GenerationTexture extends PureComponent {
+class FovoriteMovies extends PureComponent {
+    static propTypes = {
+
+    }
+
     static contextTypes = {
         i18n : PropTypes.object
     };
-
-    static propTypes = {
-       
-    }
 
     state = {
         isOpened: false
@@ -20,16 +22,11 @@ class GenerationTexture extends PureComponent {
 
     render() {
         return (
-            <TransitionGroup className={styles.GenerationTexture}>
-                <h1>Some title</h1>
+            <TransitionGroup className={styles.MainPage}>
+                <Sidebar />
+                <MainOuter />
             </TransitionGroup>
         );
-    }
-}
-
-const getSelectedData = state => {
-    return {
-        ...state
     }
 }
 
@@ -39,5 +36,5 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps, { })(GenerationTexture);
+export default connect(mapStateToProps, { })(FovoriteMovies);
 
