@@ -16,8 +16,5 @@ export function initApp() {
         ]);
         // dispatch(initDefaultSelectedData());
         dispatch({ type: FINISH_LOADING });
-    }
+    };
 }
-
-
-

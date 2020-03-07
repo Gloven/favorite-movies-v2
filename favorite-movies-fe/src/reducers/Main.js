@@ -9,12 +9,12 @@ export default function MainReducer(state = initialState, action) {
         case START_LOADING: {
             return {
                 ...state
-            }
-        }  
+            };
+        }
         case FINISH_LOADING: {
             return {
                 ...state
-            }
+            };
         }
         default:
             return state;
