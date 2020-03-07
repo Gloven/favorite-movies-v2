@@ -20,6 +20,12 @@ class Sidebar extends PureComponent {
         isActiveId: 1
     }
 
+    handleClick = (id) => {
+        this.setState({
+            isActiveId: id
+        });
+    }
+
     isActiveTab = id => this.state.isActiveId === id;
 
     render() {
@@ -36,12 +42,17 @@ class Sidebar extends PureComponent {
                         });
 
                         return (
-                            <div className={tabStyles} key={item.id}>{item.title}
+                            <div
+                                onClick = {this.handleClick.bind(this, item.id)}
+                                className={tabStyles} key={item.id}
+                            >
+                                {item.title}
                                 { isActive ?  <Icon type='arrowRight' /> : null }
                             </div>
                         );
                     })
                 }
+                <hr />
             </div>
         );
     }
