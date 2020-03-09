@@ -10,7 +10,7 @@ const MOCK_DATA = [
     { id: 'trending', title: 'Trending' },
     { id: 'coming-soon', title: 'Coming soon' },
     { id: 'favourites', title: 'Favourites' },
-    { id: 'watch later', title: 'Watch later' }
+    { id: 'watch-later', title: 'Watch later' }
 ];
 
 class Sidebar extends PureComponent {

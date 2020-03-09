@@ -4,27 +4,27 @@ import React, { Component }     from 'react';
 import { Route }                from 'react-router';
 import { Router }               from 'react-router-dom';
 import history                  from './history.js';
+
+import styles                   from './App.less';
+
+import Sidebar                  from './components/Sidebar';
+import Header                   from './components/ui-components/Header.js';
 import MainLayout               from './containers/MainLayout';
+
 import MainPage                 from './components/pages/MainPage';
 import TrendsPage               from './components/pages/TrendsPage';
+import ComingSoon               from './components/pages/ComingSoon';
+import Favourites               from './components/pages/Favourites';
+import WatchLater               from './components/pages/WatchLater';
 
-
-function dummyLayout(props) {
-    return props.children;
-}
-
-function AppRoute({ component: Page, layout, ...rest }) {   // eslint-disable-line react/prop-types
+function AppRoute({ component: Page, ...rest }) {   // eslint-disable-line react/prop-types
     return (
         <Route
             {...rest}
             render={props => {
-                const Layout = layout ? layout : dummyLayout;
-
                 return (
                     <MainLayout>
-                        <Layout>
-                            <Page {...props} />
-                        </Layout>
+                        <Page {...props} />
                     </MainLayout>
                 );
             }}
@@ -32,15 +32,24 @@ function AppRoute({ component: Page, layout, ...rest }) {   // eslint-disable-li
     );
 }
 
-class App extends Component {  // Should be Component (without scu) to make context changing works
+class App extends Component {
     render() {
         return (
             <Router history={history}>
-                <div>
-                    <AppRoute exact path='/' component={MainPage} />
-                    <AppRoute path='/new-releases' component={MainPage} />
-                    <AppRoute path='/trending' component={TrendsPage} />
-                </div>
+                <React.Fragment>
+                    <Header />
+                    <div className={styles.contentWrapper}>
+                        <Sidebar />
+                        <React.Fragment>
+                            <AppRoute exact path='/' component={MainPage} />
+                            <AppRoute path='/new-releases' component={MainPage} />
+                            <AppRoute path='/trending' component={TrendsPage} />
+                            <AppRoute path='/coming-soon' component={ComingSoon} />
+                            <AppRoute path='/favourites' component={Favourites} />
+                            <AppRoute path='/watch-later' component={WatchLater} />
+                        </React.Fragment>
+                    </div>
+                </React.Fragment>
             </Router>
         );
     }
