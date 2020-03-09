@@ -1,9 +1,12 @@
 import React, { PureComponent } from 'react';
 import PropTypes                from 'prop-types';
 import classnames               from 'classnames/bind';
+import history                  from '../history';
 
-import Icon                     from './Icon';
+
+import Icon                     from './ui-components/Icon';
 import styles                   from './SidebarMenu.less';
+
 
 const cx = classnames.bind(styles);
 
@@ -24,6 +27,8 @@ class Sidebar extends PureComponent {
         this.setState({
             isActiveId: id
         });
+
+        history.push(id);
     }
 
     isActiveTab = id => this.state.isActiveId === id;

@@ -12,6 +12,7 @@ class Button extends PureComponent {
         label     : PropTypes.string,
         onClick   : PropTypes.func,
         className : PropTypes.string,
+        icon      : PropTypes.string,
         type      : PropTypes.string
     }
 

@@ -2,15 +2,15 @@ import React, { PureComponent } from 'react';
 import PropTypes                from 'prop-types';
 import { TransitionGroup }      from 'react-transition-group';
 
-import SidebarMenu              from '../SidebarMenu';
+import SidebarMenu              from './SidebarMenu';
 import styles                   from './Sidebar.less';
 
 const MOCK_DATA = [
-    { id: 1, title: 'New releases' },
-    { id: 2, title: 'Trending' },
-    { id: 3, title: 'Coming soon' },
-    { id: 4, title: 'Favourites' },
-    { id: 5, title: 'Watch later' }
+    { id: 'new-releases', title: 'New releases' },
+    { id: 'trending', title: 'Trending' },
+    { id: 'coming-soon', title: 'Coming soon' },
+    { id: 'favourites', title: 'Favourites' },
+    { id: 'watch later', title: 'Watch later' }
 ];
 
 class Sidebar extends PureComponent {

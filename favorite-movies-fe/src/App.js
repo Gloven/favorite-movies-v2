@@ -4,8 +4,9 @@ import React, { Component }     from 'react';
 import { Route }                from 'react-router';
 import { Router }               from 'react-router-dom';
 import history                  from './history.js';
-import MainLayout               from './components/layouts/MainLayout.js';
+import MainLayout               from './containers/MainLayout';
 import MainPage                 from './components/pages/MainPage';
+import TrendsPage               from './components/pages/TrendsPage';
 
 
 function dummyLayout(props) {
@@ -36,7 +37,9 @@ class App extends Component {  // Should be Component (without scu) to make cont
         return (
             <Router history={history}>
                 <div>
-                    <AppRoute path='/' exact component={MainPage} />   {/* eslint-disable-line */}
+                    <AppRoute exact path='/' component={MainPage} />
+                    <AppRoute path='/new-releases' component={MainPage} />
+                    <AppRoute path='/trending' component={TrendsPage} />
                 </div>
             </Router>
         );

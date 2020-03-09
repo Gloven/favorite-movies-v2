@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes                from 'prop-types';
 import classnames               from 'classnames/bind';
 import { TransitionGroup }      from 'react-transition-group';
-import { Fade }                 from '../utils/animations.js';
+import { Fade }                 from '../../utils/animations.js';
 
 import styles from './Input.less';
 
