@@ -3,7 +3,12 @@
 .MainPage {
     width: 100%;
     height: calc(100vh - @headerHeight);
-    padding-left: @sidebarWidth;
+    padding: 20px 20px 20px  @sidebarWidth + 20px;
     background: @mainCounterBg;
     color: @textColor;
+
+    h1 {
+        font-weight: normal;
+        text-transform: capitalize;
+    }
 }
