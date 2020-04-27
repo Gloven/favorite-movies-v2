@@ -2,9 +2,6 @@ import React, { PureComponent } from 'react';
 import PropTypes                from 'prop-types';
 import { connect }              from 'react-redux';
 
-import { mountApp }             from '../main.js';
-
-
 import styles from './MainLayout.less';
 
 class MainLayout extends PureComponent {
@@ -15,12 +12,6 @@ class MainLayout extends PureComponent {
     static contextTypes = {
         i18n : PropTypes.object
     }
-
-    handleChange = locale => {
-        localStorage.setItem('language', locale.toLowerCase());
-
-        mountApp();
-    };
 
     render() {
         const { children  } = this.props;

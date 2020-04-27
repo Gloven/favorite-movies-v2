@@ -1,4 +1,4 @@
 export default {
     apiUrl    : 'http://localhost:8080',
-    apiPrefix : '/'
+    apiPrefix : '/api/movies/'
 };

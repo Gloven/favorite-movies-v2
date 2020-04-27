@@ -1,4 +1,5 @@
 import ApiClient      from './ApiClient.js';
+import NewReleases    from './NewReleases';
 
 export default function ({ apiPrefix } = {}) {
     if (!apiPrefix) {
@@ -9,6 +10,6 @@ export default function ({ apiPrefix } = {}) {
 
     return {
         apiClient  : api,
-        // brick      : new BrickAPI({ apiClient: api }),
+        newReleases : new NewReleases({ apiClient: api })
     };
 }

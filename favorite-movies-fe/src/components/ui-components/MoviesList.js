@@ -25,16 +25,16 @@ class MoviesList extends PureComponent {
         return (
             <div className={classes}>
                 { moviesList.map(movie => {
-                    const { rating, genre, imgUrl, name, id } = movie;
+                    const { rate, genre, posterUrl, name, _id } = movie;
 
                     return (
                         <MovieCard
-                            key= {id}
-                            rating={rating}
+                            key= {_id}
+                            rating={rate}
                             genre={genre}
-                            imgUrl={imgUrl}
+                            imgUrl={posterUrl}
                             name={name}
-                            id={id}
+                            id={_id}
                         />
                     );
                 })}

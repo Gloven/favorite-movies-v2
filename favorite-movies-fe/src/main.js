@@ -8,6 +8,7 @@ import { Provider }     from 'react-redux';
 import locales          from '../lang';
 import configureStore   from './store/configureStore.js';
 import i18n             from './i18n';
+import App              from  './containers/App';
 
 const store = configureStore();
 
@@ -27,15 +28,9 @@ function render(Component) {
     );
 }
 
-export function mountApp() {
-    const NextApp = require('./App.js').default;
-
-    render(NextApp);
-}
-
-mountApp();
+render(App);
 
 if (module.hot) {
-    module.hot.accept('./App.js', () => mountApp());
+    module.hot.accept(App, () => render());
 }
 

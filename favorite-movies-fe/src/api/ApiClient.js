@@ -55,10 +55,7 @@ export default class ApiClient {
             {
                 method,
                 headers : {
-                    'Content-Type' : 'application/json',
-                    regionId       : localStorage.getItem('regionId')
-                        ? localStorage.getItem('regionId')
-                        : 1,
+                    'Content-Type' : 'application/json'
                 },
                 withCredentials : true,
                 crossDomain     : false,
@@ -66,12 +63,10 @@ export default class ApiClient {
             }
         );
 
-        if (response.status === 200 && url === 'generate-existing/') return true; 
-
         const json = await response.json();
 
         if (json.status >= 400) throw json.message;
 
-        return json._embedded || json;
+        return json;
     }
 }
