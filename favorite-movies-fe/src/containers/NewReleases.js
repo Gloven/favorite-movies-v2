@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { useEffect }     from 'react';
 import PropTypes                from 'prop-types';
 import { bindActionCreators }   from 'redux';
 import { connect }              from 'react-redux';
@@ -8,26 +8,19 @@ import  * as newReleasesActions from '../actions/NewReleasesActions';
 import MainPage                 from '../components/pages/MainPage';
 
 
-class NewReleases extends PureComponent {
-    static propTypes = {
-        newReleasesActions : PropTypes.func,
-        moviesList         : PropTypes.array
-    }
+function NewReleases(props) {
+    useEffect(() => {
+        props.newReleasesActions.loadNewReleases();
+    }, []);
+    const { moviesList }  = props;
 
-    componentWillMount() {
-        this.props.newReleasesActions.loadNewReleases();
-    }
-
-    render() {
-        const { moviesList } = this.props;
-
-        return (
-            <MainPage
-                moviesList = {moviesList}
-            />
-        );
-    }
+    return  <MainPage moviesList = {moviesList} />;
 }
+
+NewReleases.propTypes = {
+    newReleasesActions : PropTypes.object,
+    moviesList         : PropTypes.array
+};
 
 function mapStateToProps(state) {
     return {

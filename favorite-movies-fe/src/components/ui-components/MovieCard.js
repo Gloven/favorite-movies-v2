@@ -12,7 +12,7 @@ const cx = classnames.bind(styles);
 class MovieCard extends Component {
     static propTypes = {
         className: PropTypes.string,
-        rating   : PropTypes.string,
+        rating   : PropTypes.number,
         genre    : PropTypes.string,
         imgUrl   : PropTypes.string.isRequired,
         name     : PropTypes.string.isRequired,

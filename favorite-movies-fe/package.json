@@ -54,9 +54,9 @@
     "qhistory": "1.0.0",
     "query-string": "5.1.0",
     "rc-slider": "^8.6.13",
-    "react": "16.3.0",
+    "react": "16.13.1",
     "react-dom": "^16.12.0",
-    "react-hot-loader": "4.0.0",
+    "react-hot-loader": "4.8.8",
     "react-modal": "3.8.1",
     "react-redux": "5.0.7",
     "react-router": "4.2.0",
@@ -89,6 +89,7 @@
     "eslint-plugin-more": "^0.1.1",
     "eslint-plugin-no-require-lodash": "^1.1.0",
     "eslint-plugin-prefer-spread": "^1.0.3",
-    "eslint-plugin-react": "^7.18.3"
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^3.0.0"
   }
 }

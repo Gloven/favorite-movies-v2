@@ -1,25 +1,23 @@
-import React, { PureComponent } from 'react';
-import PropTypes                from 'prop-types';
-import MoviesList                from '../ui-components/MoviesList';
+import React      from 'react';
+import PropTypes  from 'prop-types';
+import MoviesList from '../ui-components/MoviesList';
 
-import styles                   from './MainPage.less';
+import styles     from './MainPage.less';
 
-class FovoriteMovies extends PureComponent {
-    static propTypes = {
-        moviesList: PropTypes.arrayOf(Object)
-    }
+function FovoriteMovies(props) {
+    const { moviesList } = props;
 
-    render() {
-        const { moviesList } = this.props;
-
-        return (
-            <div className={styles.MainPage}>
-                <h1>New Releases</h1>
-                <MoviesList moviesList = {moviesList} />
-            </div>
-        );
-    }
+    return moviesList ? (
+        <div className={styles.MainPage}>
+            <h1>New Releases</h1>
+            <MoviesList moviesList = {moviesList} />
+        </div>
+    ) : <div>Loading...</div>;
 }
+
+FovoriteMovies.propTypes = {
+    moviesList: PropTypes.arrayOf(Object)
+};
 
 export default (FovoriteMovies);
 
