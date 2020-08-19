@@ -1,4 +1,4 @@
-export const SELECT_SIDEBAR_ITEM  = 'SELECT_SIDEBAR_ITEM';
+export const SELECT_SIDEBAR_ITEM = 'SELECT_SIDEBAR_ITEM';
 
 export function selectSidebarItem(payload) {
     return async dispatch => {

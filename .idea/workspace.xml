@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25249d19-4e08-4f43-b124-e150cbfbea66" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/favorite-movies-fe/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/favorite-movies-fe/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/favorite-movies-fe/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/favorite-movies-fe/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/favorite-movies-be/routes/movies.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/favorite-movies-be/routes/movies.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/favorite-movies-fe/src/api/NewReleases.js" beforeDir="false" afterPath="$PROJECT_DIR$/favorite-movies-fe/src/api/NewReleases.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/favorite-movies-fe/src/components/ui-components/MovieCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/favorite-movies-fe/src/components/ui-components/MovieCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/favorite-movies-fe/src/containers/NewReleases.js" beforeDir="false" afterPath="$PROJECT_DIR$/favorite-movies-fe/src/containers/NewReleases.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/favorite-movies-fe/src/components/ui-components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/favorite-movies-fe/src/components/ui-components/Sidebar/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/favorite-movies-fe/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/favorite-movies-fe/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/favorite-movies-fe/src/containers/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/favorite-movies-fe/src/containers/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/favorite-movies-fe/src/containers/MainLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/favorite-movies-fe/src/containers/MainLayout.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +31,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -40,10 +46,18 @@
       <option name="presentableId" value="Default" />
       <updated>1588073205224</updated>
       <workItem from="1588073207340" duration="138000" />
+      <workItem from="1593785797932" duration="355000" />
+      <workItem from="1594809125060" duration="209000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="221" y="100" key="SettingsEditor" timestamp="1593786293106">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1593786293106" />
   </component>
 </project>

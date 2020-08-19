@@ -20,7 +20,7 @@ router.get('/list', async (req, res) => {
 // CREATE NEW MOVIE
 
 router.post(
-'/create',
+'/',
     [
         check('name', 'Name field is empty!').isLength({ min: 1}),
         check('year', 'Year field must be [1900 ... 2020]').isInt({ min: 1900, max: 2020}),
@@ -71,7 +71,7 @@ router.post(
 
 // GET ONE FIELD BY ID
 
-router.post('/:id',  [
+router.get('/:id',  [
     check('id', 'Id is not valid').isMongoId()
     ],
     async (req, res) => {

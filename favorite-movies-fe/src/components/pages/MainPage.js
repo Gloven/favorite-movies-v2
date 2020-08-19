@@ -1,8 +1,7 @@
-import React      from 'react';
-import PropTypes  from 'prop-types';
+import PropTypes from 'prop-types';
+import React from 'react';
 import MoviesList from '../ui-components/MoviesList';
-
-import styles     from './MainPage.less';
+import styles from './MainPage.less';
 
 function FovoriteMovies(props) {
     const { moviesList } = props;
@@ -10,7 +9,7 @@ function FovoriteMovies(props) {
     return moviesList ? (
         <div className={styles.MainPage}>
             <h1>New Releases</h1>
-            <MoviesList moviesList = {moviesList} />
+            <MoviesList moviesList={moviesList} />
         </div>
     ) : <div>Loading...</div>;
 }

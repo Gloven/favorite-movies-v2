@@ -32,7 +32,7 @@ class MovieCard extends Component {
 
         return (
             <div className={classes}>
-                <Link to={id}>
+                <Link to={`/movies/${id}`}>
                     <div className={styles.imageWrapper}>
                         <div className={styles.rating}>{rating}</div>
                         <img src={imgUrl} />

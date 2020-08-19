@@ -20,7 +20,6 @@ xgettext --keyword="l:1" \
          --output="${ROOT_DIR}/lang/messages.pot";
 
 msgmerge --backup=off -U "${ROOT_DIR}/lang/en.po" "${ROOT_DIR}/lang/messages.pot";
-msgmerge --backup=off -U "${ROOT_DIR}/lang/ua.po" "${ROOT_DIR}/lang/messages.pot";
 
 # Cleanup
 rm -rf "${ROOT_DIR}/src_es5";

@@ -1,25 +1,23 @@
-import React, { useEffect }     from 'react';
-import PropTypes                from 'prop-types';
-import { bindActionCreators }   from 'redux';
-import { connect }              from 'react-redux';
-
-import  * as newReleasesActions from '../actions/NewReleasesActions';
-
-import MainPage                 from '../components/pages/MainPage';
-
+import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as newReleasesActions from '../actions/NewReleasesActions';
+import MainPage from '../components/pages/MainPage';
 
 function NewReleases(props) {
+    const { moviesList } = props;
+
     useEffect(() => {
         props.newReleasesActions.loadNewReleases();
     }, []);
-    const { moviesList }  = props;
 
-    return  <MainPage moviesList = {moviesList} />;
+    return <MainPage moviesList={moviesList} />;
 }
 
 NewReleases.propTypes = {
-    newReleasesActions : PropTypes.object,
-    moviesList         : PropTypes.array
+    newReleasesActions: PropTypes.object,
+    moviesList: PropTypes.array
 };
 
 function mapStateToProps(state) {
@@ -30,7 +28,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        newReleasesActions  : bindActionCreators(newReleasesActions, dispatch)
+        newReleasesActions: bindActionCreators(newReleasesActions, dispatch)
     };
 }
 

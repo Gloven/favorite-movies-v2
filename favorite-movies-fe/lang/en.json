@@ -5,70 +5,18 @@
          "LOGOUT": [
             ""
          ],
-         "Title": [
-            ""
-         ],
-         "Subtitle": [
-            ""
-         ],
-         "Image URL": [
-            ""
-         ],
-         "Text": [
-            ""
-         ],
          "GO BACK": [
-            ""
-         ],
-         "Edit your post here": [
-            ""
-         ],
-         "Create your post here": [
             ""
          ],
          "SAVE": [
             ""
          ],
-         "Sign in into your account": [
-            ""
-         ],
-         "Your account is your portal to all modern React things: Babel, Webpack, React Router, Hot Reload, and more!": [
-            ""
-         ],
-         "Email Address": [
-            ""
-         ],
-         "Password": [
-            ""
-         ],
-         "By signing in, you agree to the": [
-            ""
-         ],
-         "Terms of Service": [
-            ""
-         ],
          "SIGN IN": [
-            ""
-         ],
-         "Search": [
             ""
          ],
          "CREATE NEW": [
             ""
-         ],
-         "%d hour": [
-            "",
-            "%d hours"
-         ],
-         "%d minute": [
-            "",
-            "%d minutes"
-         ],
-         "": {
-            "domain": "messages",
-            "plural_forms": "nplurals=INTEGER; plural=EXPRESSION;",
-            "lang": ""
-         }
+         ]
       }
    }
 }

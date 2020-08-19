@@ -6,7 +6,7 @@ import SidebarMenu              from './SidebarMenu';
 import styles                   from './Sidebar.less';
 
 const MOCK_DATA = [
-    { id: 'new-releases', title: 'New releases' },
+    { id: 'movies', title: 'New releases' },
     { id: 'trending', title: 'Trending' },
     { id: 'coming-soon', title: 'Coming soon' },
     { id: 'favourites', title: 'Favourites' },
