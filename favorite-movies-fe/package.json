@@ -46,7 +46,7 @@
     "less": "3.9.0",
     "less-loader": "4.0.6",
     "livr": "2.2.2",
-    "moment": "2.21.0",
+    "moment": "2.29.4",
     "nsp": "3.2.1",
     "po2json": "0.4.5",
     "postcss-loader": "2.1.1",
